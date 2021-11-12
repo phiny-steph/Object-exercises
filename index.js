@@ -30,22 +30,36 @@ TIP: Remember to put all of your object's properties and methods inside curly br
 
 
 
-var umbrella = {
-   color: "pink",
-   isOpen: true,
-   open: function() {
-       if (umbrella.isOpen === true) {
-           return "The umbrella is already opened!";
-       } else {
-           umbrella.isOpen = true;
-           return "Julia opens the umbrella!";
-       }
-   },
-   // your code goes here
-};
+const umbrella =  {
+    color: "red",
+    isOpen: true,
+    open: function(){
+        if (umbrella.isOpen === true){
+            return "The umbrella is opened!";
+        }else {
+            umbrella.isOpen = true;
+            return "Steph opened the umbrella";
+        }
+    },
+
+
+     close: function () {
+        if (umbrella.isOpen !== true){
+            return "The Umbrella is closed!";
+        }else {
+            umbrella.isOpen = true;
+            return "Steph closed the umbrella";
+        }
+     }
+   };
+   console.log(umbrella.close());
 
 
 
+
+
+
+/*
 2. Create a breakfast object to represent the following menu item:
 
 The Lumberjack - $9.95
@@ -60,6 +74,19 @@ The object should contain properties for the name, price, and ingredients.
 */
 
 // your code goes here
+
+
+
+
+let breakfast = {
+    name: "Lumberjack",
+    price: "$9.95",
+    ingredients: [ "eggs, sausage, toast, hashbrowns, pancakes"]
+};
+console.log(breakfast);
+
+
+/*
 
 3.	Using the given object:
 
@@ -111,6 +138,9 @@ const savingsAccount = {
        }
    },
    // your code goes here
+ printAccountSummary: function(){
+  return "Welcome! \nYour balance is currently $1000 and your interest rate is 1%."
+ }
 };
 
 console.log(savingsAccount.printAccountSummary());
