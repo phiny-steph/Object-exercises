@@ -149,7 +149,7 @@ console.log(savingsAccount.printAccountSummary());
 
 
 
-
+/*
 
 4. Using the object from exercise 3, answer the following quiz question:
 Which of the following are valid ways to access properties and call methods from the savingsAccount object?
@@ -161,11 +161,16 @@ savingsAccount.withdraw = 50;
 savingsAccount.removeMoney = 50;
 savingsAccount.withdraw(50);
 savingsAccount.removeMoney(50);
+*/
+
+savingsAccount.balance;
+savingsAccount["balance"];
+savingsAccount.withdraw = 50;
+savingsAccount.removeMoney = 50;
 
 
 
-
-
+/*
 5. Create an object called facebookProfile. The object should have 3 properties:
 
 your name
@@ -200,13 +205,34 @@ removeFriend() - decreases the friend count by 1
 // your code goes here
 
 
+let facebookProfile ={
+    name: "steph annie",
+    friends: 120,
+    messages: ["Hi", "Welcome", "Have a nice day", "Bye"],
+
+    postMessage: function(messages){
+        facebookProfile.messages.push("welcome back");
+    },
+    deleteMessage: function(index){
+        facebookProfile.messages.splice(index,1);
+    },
+    addFriend: function(){
+        facebookProfile.friends++;
+    },
+    removeFriend: function(){
+        facebookProfile.friends--
+    }
+};
+  
+console.log(facebookProfile.removeFriend(2));
+console.log(facebookProfile)
 
 
 
 
 
 
-
+/*
 
 6. Here is an array of donut objects.
 
@@ -234,6 +260,7 @@ Boston Cream donuts cost $5.99 each
 */
 
 // This is an array of objects.
+
 const donuts = [
    { type: "Jelly", cost: 1.22 },
    { type: "Chocolate", cost: 2.45 },
@@ -242,5 +269,25 @@ const donuts = [
 ];
 
 // your code goes here
+
+donuts.forEach(element => {
+    
+ console.log(element.type + "cost" + element.cost + each);
+
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
